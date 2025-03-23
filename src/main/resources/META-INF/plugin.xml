@@ -1,0 +1,16 @@
+<idea-plugin>
+    <id>com.dnpplugins.tracktime</id>
+    <name>TrackTime</name>
+    <version>0.2.0</version>
+    <vendor email="ilya.aleshin@megafon.ru">Ilya Aleshin (DNP)</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
+
+    <applicationListeners>
+        <listener class="com.dnpplugins.tracktime.GitActivityLogger$Listener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+    </applicationListeners>
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.dnpplugins.tracktime.GitActivityLogger"></postStartupActivity>
+    </extensions>
+</idea-plugin>
