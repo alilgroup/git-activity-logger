@@ -6,28 +6,22 @@ JetBrains IDE Git Activity Logger is a plugin for JetBrains IDE that tracks the 
 
 ## ✨ Features
 
-- ⏱**Automatic IDE activity logging every 5 minutes.**
-- **Captures the current Git branch.**
-- **Saves data to a csv log.**
-- **Runs in the background without user intervention.**
+- Automatic IDE activity logging every 5 minutes.
+- Captures the current Git branch.
+- Saves data to a csv log.
+- Runs in the background without user intervention.
 
 ## 📜 Log Format
 
-Plugin working dir: **%user_folder%/.git-activity-logger/**
+Plugin working dir - `%user_folder%/.git-activity-logger`
 
-File name template is **%YEAR%.%MONTH%.csv**
+File name template - `%YEAR%.%MONTH%.csv`
 
-Every monthly csv contains:
+Every monthly csv contains 5 minutes line with:
 
 - `project` — Name of working project with.
 - `datetime` — ISO date in UTC.
 - `branch` — Name of the active Git branch.
-
-Example entry:
-File 
-```csv
-project, datetime, branch
-```
 
 ## 🛠️ Build
 
