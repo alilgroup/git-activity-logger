@@ -41,7 +41,7 @@ public final class GitActivityLogger implements ProjectActivity {
         java.util.Date date = new Date();
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
-        int month = cal.get(Calendar.MONTH);
+        int month = cal.get(Calendar.MONTH) + 1;
         int year = cal.get(Calendar.YEAR);
         String fileName = String.format("%d.%d.csv", year, month);
         logFilePath = Paths.get(homeDir, ".git-activity-logger", fileName);
